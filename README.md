@@ -31,7 +31,7 @@ Any questions please contact our team
 - The composition must be made from the current date
 - The limit of each model must be respected, this means that there cannot be date conflicts between the models
 - The first day of the first model and the last day of the last model must be equal to the specified period
-- There can be no date holes between models
+- There can be no date gaps between models
 - The all tests need to be passing
 
 ## Expected model input
