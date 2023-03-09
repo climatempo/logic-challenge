@@ -1,7 +1,7 @@
 exports.modelComposition = function(model, period) {
   const compositions = []
 
-  // Write the code here
+  console.log('Hello World!')
 
   return compositions
 }
