@@ -80,9 +80,10 @@ modelComposition(models, period)
   }
 ]
 
-The CFS model is not included because the final period informed is within the limits of the WRF, because the current day 2023-03-08 + 29 days is 2023-04-06
 */
 ```
+The CFS model is not included because the final period informed is within the limits of the WRF, 
+because the current day 2023-03-08 + 29 days is 2023-04-06
 
 ## Expected response format
 

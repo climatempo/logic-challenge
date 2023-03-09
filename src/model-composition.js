@@ -1,4 +1,4 @@
-exports.modelComposition = function(model, period) {
+exports.modelComposition = function (model, period) {
   const compositions = []
 
   console.log('Hello World!')

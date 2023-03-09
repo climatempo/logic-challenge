@@ -166,6 +166,11 @@ describe('Model composition', () => {
     const endTime = new Date().getTime()
 
     expect(result).toHaveLength(3)
-    expect(endTime - startTime).toBeLessThanOrEqual(10) // ms
+
+    const execTime = endTime - startTime
+
+    console.log('execTime:', `${execTime}ms`)
+
+    expect(execTime).toBeLessThanOrEqual(10) // ms
   })
 })
