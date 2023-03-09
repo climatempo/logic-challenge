@@ -154,4 +154,17 @@ describe('Model composition', () => {
     expect(new Date(result[2].period.startDate)).toEqual(new Date(format(addDays(zeroDay, 15), 'yyyy-MM-dd 00:00:00')))
     expect(result[2].period.endDate).toEqual(period.endDate)
   })
+
+  test('should have an execution time of less than 10ms', async () => {
+    const period = {
+      startDate: zeroDay,
+      endDate: addDays(zeroDay, 29),
+    }
+
+    const startTime = new Date().getTime()
+    modelComposition(models, period)
+    const endTime = new Date().getTime()
+
+    expect(endTime - startTime).toBeLessThanOrEqual(10) // ms
+  })
 })
