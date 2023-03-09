@@ -22,6 +22,8 @@ The challenge is to implement a logic to assemble this composition of models wit
 
 3. Open the pull request
 
+4. [Answer the form](https://docs.google.com/forms/d/e/1FAIpQLSfPIwojh04iSxIrrOJSyrMvYcStLpoO3luR11ZxBY_pkWsjGA/viewform)
+
 Any questions please contact our team
 
 ## Rules
@@ -106,3 +108,7 @@ because the current day 2023-03-08 + 29 days is 2023-04-06
 	- `startDate`: Start date (format: yyyy-MM-dd HH:mm:ss)
 	
 	- `endDate`: End date (format: yyyy-MM-dd HH:mm:ss)
+
+-------------------------------------------------------------------------------------------------
+
+## Good luck!
