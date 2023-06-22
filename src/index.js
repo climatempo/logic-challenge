@@ -38,3 +38,12 @@ console.log(modelComposition(models, cfsPeriod))
 console.log('--------------------------------------------')
 console.log('ALL')
 console.log(modelComposition(models, allPeriod))
+
+// Test string input, as demanded by README.md
+const period = {       
+	startDate: '2023-06-27 05:00:01',
+	endDate: '2023-07-16 22:00:00',
+}
+console.log('--------------------------------------------')
+console.log('TEST')
+console.log(modelComposition(models, period))
