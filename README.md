@@ -1,3 +1,14 @@
+Run the tests
+<code>
+npm test
+</code>
+
+Open the console and manual testing
+<code>
+node
+let index; index = require("./src/index.js");
+</code>
+
 # Logic Challenge
 
 Here at Climatempo we work with several meteorological models to consult forecast data, but the models are accurate up to a certain number of days, so we need to consult several models to compose the best result for the period sought.
@@ -57,7 +68,7 @@ const models = {
   CFS: '15:29',
 }
 
-const period = {       
+const period = {
 	startDate: '2023-03-08 05:00:01',
 	endDate: '2023-03-20 22:00:00'
 }
@@ -84,7 +95,7 @@ modelComposition(models, period)
 
 */
 ```
-The CFS model is not included because the final period informed is within the limits of the WRF, 
+The CFS model is not included because the final period informed is within the limits of the WRF,
 because the current day 2023-03-08 + 29 days is 2023-04-06
 
 ## Expected response format
@@ -106,7 +117,7 @@ because the current day 2023-03-08 + 29 days is 2023-04-06
 - `period`:
 
 	- `startDate`: Start date (format: yyyy-MM-dd HH:mm:ss)
-	
+
 	- `endDate`: End date (format: yyyy-MM-dd HH:mm:ss)
 
 -------------------------------------------------------------------------------------------------
