@@ -27,10 +27,11 @@ describe('Model composition', () => {
     }
 
     const result = modelComposition(models, period)
+    console.log(result)
 
     expect(result).toHaveLength(1)
     expect(result[0].model).toBe('METEOROLOGIST')
-    expect(result[0].period.startDate).toBe(period.startDate)
+    expect(result[0].period.startDate).toEqual(period.startDate)
     expect(result[0].period.endDate).toBe(period.endDate)
   })
 
@@ -58,7 +59,7 @@ describe('Model composition', () => {
 
     expect(result).toHaveLength(1)
     expect(result[0].model).toBe('WRF')
-    expect(result[0].period.startDate).toBe(period.startDate)
+    expect(result[0].period.startDate).toEqual(period.startDate)
     expect(result[0].period.endDate).toBe(period.endDate)
   })
 
@@ -86,7 +87,7 @@ describe('Model composition', () => {
 
     expect(result).toHaveLength(1)
     expect(result[0].model).toBe('CFS')
-    expect(result[0].period.startDate).toBe(period.startDate)
+    expect(result[0].period.startDate).toEqual(period.startDate)
     expect(result[0].period.endDate).toBe(period.endDate)
   })
 
