@@ -29,12 +29,12 @@ const allPeriod = {
 
 console.log('METEOROLOGIST')
 console.log(modelComposition(models, metPeriod))
-console.log('--------------------------------------------')
+
 console.log('WRF')
 console.log(modelComposition(models, wrfPeriod))
-console.log('--------------------------------------------')
+
 console.log('CFS')
 console.log(modelComposition(models, cfsPeriod))
-console.log('--------------------------------------------')
+
 console.log('ALL')
 console.log(modelComposition(models, allPeriod))
