@@ -1,0 +1,55 @@
+from datetime import datetime, timedelta
+import pandas as pd
+
+# Definindo os modelos e seus respectivos intervalos de datas
+modelos = {
+    'METEOROLOGIST': '0:4',
+    'WRF': '5:14',
+    'CFS': '15:29'
+}
+
+# Definindo o período geral que foi definido para a resolução do projeto
+periodo = {
+    'inicio': '2023-06-01 05:00:01',
+    'fim': '2023-06-23 22:00:00'
+}
+
+# Convertendo as datas para o formato datetime
+inicio = datetime.strptime(periodo['inicio'], '%Y-%m-%d %H:%M:%S')
+fim = datetime.strptime(periodo['fim'], '%Y-%m-%d %H:%M:%S')
+
+# Lista para armazenar os resultados
+resultados = []
+
+# Iterando sobre cada modelo e seus intervalos
+for modelo, intervalo in modelos.items():
+    # Separando o intervalo em início e fim
+    intervalo_inicio, intervalo_fim = map(int, intervalo.split(':'))
+    
+    # Calculando as datas específicas para o modelo
+    modelo_inicio = inicio + timedelta(days=intervalo_inicio)
+    modelo_fim = inicio + timedelta(days=intervalo_fim)
+    
+    # Verificando se o intervalo do modelo está dentro do período geral
+    if modelo_inicio <= fim and modelo_fim >= inicio:
+        # Ajustando as datas de início e fim para respeitar o período geral
+        modelo_inicio = max(modelo_inicio, inicio)
+        modelo_fim = min(modelo_fim, fim)
+        
+        # Adicionando o resultado à lista
+        resultados.append({
+            'modelo': modelo,
+            'periodo': {
+                'inicio': modelo_inicio.isoformat(),
+                'fim': modelo_fim.isoformat()
+            }
+        })
+
+# Criando o DataFrame com os resultados
+df = pd.DataFrame(resultados)
+
+# Renomeando as colunas para melhor visualização dos resultados
+df = df.rename(columns={'modelo': 'modelo', 'periodo.inicio': 'inicio', 'periodo.fim': 'fim'})
+
+# Exibindo o DataFrame
+print(df)
