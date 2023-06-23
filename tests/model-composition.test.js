@@ -162,9 +162,11 @@ describe('Model composition', () => {
     }
 
     const startTime = new Date().getTime()
+    await modelComposition(models, period);
     const result = modelComposition(models, period)
     const endTime = new Date().getTime()
-
+    
+    expect(endTime - startTime).toBeLessThanOrEqual(10); // ms
     expect(result).toHaveLength(3)
 
     const execTime = endTime - startTime
