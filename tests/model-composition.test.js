@@ -27,8 +27,6 @@ describe('Model composition', () => {
     }
 
     const result = modelComposition(models, period)
-    console.log(result)
-
     expect(result).toHaveLength(1)
     expect(result[0].model).toBe('METEOROLOGIST')
     expect(result[0].period.startDate).toEqual(period.startDate)

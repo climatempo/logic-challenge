@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "TZ=UTC node src/index.js",
-    "test": "TZ=UTC jest tests --colors",
+    "test": "set TZ=UTC && jest tests --colors",
+
     "lint": "eslint src/model-composition.js"
   },
   "homepage": "https://github.com/climatempo/logic-challenge#readme",
