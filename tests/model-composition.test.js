@@ -173,4 +173,17 @@ describe('Model composition', () => {
 
     expect(execTime).toBeLessThanOrEqual(10) // ms
   })
+  const models = {
+    METEOROLOGIST: '0:4',
+    WRF: '5:14',
+    CFS: '15:29',
+  }
+
+  const period = {
+    startDate: '2023-03-08 05:00:01',
+    endDate: '2023-03-20 22:00:00'
+  }
+
+  const composition = modelComposition(models, period);
+  console.log(composition);
 })
